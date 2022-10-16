@@ -23,37 +23,34 @@ function App() {
 
     axios.get(url).then(res => {
       console.log(res.data.data.results)
-    setlistcharacters(res.data.data.results)
+      setlistcharacters(res.data.data.results)
 
+    }).catch(e => console.log(e))
 
-  }).catch(e=> console.log(e))
+    console.log(charater);
 
-  console.log(charater);
-    /*const getcharacters = async ()=> {
-      const url = 'http://gateway.marvel.com/v1/public/characters?apikey=cc90b6307b4b0cca6c083afc0b4bb326'
-    const res = await axios.get(url);
-    console.log(res.data);
-  }*/
-  //getcharacters();
 
   }, []);
 
   return (
     <div className='App' >
       <h1>Marvel</h1>
-
-        <ul>
-          {charater.map(char => {
-              return(
-                <div>
-                  <li>
-                    <h4>Name: {char.name}</h4>
-                  </li>
+      <div className='row row-cols-1 row cols-md-3 g-4'>
+        {charater.map(char => {
+          return (
+            <div className='col' key={char.id}>
+              <div className='card'>
+                <img src={`${char.thumbnail.path}.${char.thumbnail.extension}`} alt={char.name} className="img-fluid rounded-pill" />
+                <div className='card-body'>
+                  <h4 className='card-text'>name: {char.name}</h4>
+                  <a href='#' className='btn btn-primary'>Learn More</a>
                 </div>
-              )
-            })
-          }
-        </ul>
+              </div>
+            </div>
+          )
+        })
+        }
+      </div>
     </div>
   );
 }
