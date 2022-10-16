@@ -11,7 +11,6 @@ import { useEffect, useState } from 'react'
 
 //118662b5aff20448f99e57f972fc85ee533dfd497cc90b6307b4b0cca6c083afc0b4bb326
 
-
 //hash: c93df59dd6c682320889d9d20dcfc720
 
 function App() {
@@ -26,23 +25,20 @@ function App() {
       setlistcharacters(res.data.data.results)
 
     }).catch(e => console.log(e))
-
     console.log(charater);
-
-
   }, []);
 
   return (
     <div className='App' >
       <h1>Marvel</h1>
-      <div className='row row-cols-1 row cols-md-3 g-4'>
+      <div className='card-group'>
         {charater.map(char => {
           return (
-            <div className='col' key={char.id}>
+            <div className='col-md-4' key={char.id}>
               <div className='card'>
-                <img src={`${char.thumbnail.path}.${char.thumbnail.extension}`} alt={char.name} className="img-fluid rounded-pill" />
+                <img src={`${char.thumbnail.path}.${char.thumbnail.extension}`} alt={char.name} className="card-img-top" />
                 <div className='card-body'>
-                  <h4 className='card-text'>name: {char.name}</h4>
+                  <h4 className='card-title'>{char.name}</h4>
                   <a href='#' className='btn btn-primary'>Learn More</a>
                 </div>
               </div>
