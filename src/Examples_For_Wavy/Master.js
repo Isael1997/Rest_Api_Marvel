@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import '../src/Master.css'
 import { WavyContainer, WavyLink } from "react-wavy-transitions";
-import App from './App';
+import App from '../App';
 
 const Home = () => <div><App/></div>
 const About = () => <div>About</div>

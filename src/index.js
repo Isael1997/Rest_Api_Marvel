@@ -3,14 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Cards from './Cards';
-import Master from './Master';
-import Hello from './Hello';
-
+import Navigation from './Navigation';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Master/>
+    <Navigation/>
   </React.StrictMode>
 );
 
