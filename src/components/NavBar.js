@@ -1,12 +1,13 @@
 import React from "react";
-import './NarBar.css'
+import '../styles/navs.css'
+
 function NavBar() {
     return (
         <div>
             <nav className="navbar">
                 {/*Logo */} 
                 <div className="logo"><a>Apis</a></div>
-                {/* MEnu de Navigaciones */}
+                {/* NAVIGATIONS MENU */}
                 <ul className="nav-links">
                     {/* USING CHECKBOX HACK */}
                     <input type="checkbox" id="checkbox_toggle" />
