@@ -25,14 +25,15 @@ const cards = [
         image: image3,
         url: "https://youtube.com/fazttech",
     },
+
 ];
 
 export default function Home() {
     return (
-        <div className='container d-flex justify-content-center align-items-center h-90'>
+        <div className='container d-flex justify-content-center align-items-center'>
             <div className='row'>
                 {cards.map(({ title, image, url, id }) => (
-                    <div className="col-md-4" key={id}>
+                    <div className="col-md" key={id}>
                         <Cards imageSource={image} title={title} url={url} />
                     </div>
                 ))}
