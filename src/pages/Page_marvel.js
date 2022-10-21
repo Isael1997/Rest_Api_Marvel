@@ -1,4 +1,3 @@
-import '../styles/Page_marvel.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react'
 
@@ -26,7 +25,7 @@ export default function Page_marvel() {
         console.log(charater);
     }, []);
     return (
-        <div className='App' >
+        <div>
             <h1 className='title'>Marvel</h1>
             <div className='card-group'>
                 {charater.map(char => {

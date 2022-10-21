@@ -4,17 +4,13 @@ function NavPage({ page, setPage }) {
     const Apage = () => {
         if (page === 1) {
             setPage(1);
-            alert("NO hay mas paginas");
+            alert("No hay mas paginas");
             console.log("Pagina: ", { page })
         }
         else {
             setPage(page - 1);
         }
-
-
-
     }
-
 
     return (
         <header className="d-flex justify-content-between align-items-center">

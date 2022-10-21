@@ -18,7 +18,7 @@ function App() {
   return (
 
     <BrowserRouter>
-      <div className='App'>
+      <div>
         <NavBar />
         <Routes>
           {/*Main Routers */}
