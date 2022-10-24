@@ -10,6 +10,7 @@ export default function Home() {
                 <div className='col-md'>
                     <li><NavLink to='/pages/page_marvel'>Page Marvel</NavLink></li>
                     <li><NavLink to='/pages/page_rick_and_morty'>Page Rick and Morty</NavLink></li>
+                    <li><NavLink to='/pages/page_pokemon'>Page Pokemon</NavLink></li>
                     
                 </div>
             </div>

@@ -5,10 +5,12 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
-
+//Pages of api
 import Page_marvel from './pages/Page_marvel';
 import Page_rick_and_morty from './pages/Page_rick_and_morty';
+import Page_pokemeon from './pages/Page_pokemon';
 
+//Styles and Bootstrap
 import './styles/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -29,6 +31,7 @@ function App() {
           {/*Sencondary Routers */}
           <Route path='/pages/page_marvel' element={<Page_marvel/>}/>
           <Route path='/pages/page_rick_and_morty' element={<Page_rick_and_morty/>}/>
+          <Route path='/pages/page_pokemon' element={<Page_pokemeon/>}/>
 
           <Route path="*" element={<NotFound />} />
         </Routes>
